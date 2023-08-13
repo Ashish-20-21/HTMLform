@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Bg work*/
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #111714, #a7c9c9); /* Gradient background */
+    }
+
+    /* container work */
+    .container {
+      width: 600px;
+      margin: 150px auto;
+      border: 5px solid #ccc;
+      padding: 50px;
+      background-color: white; /* White background */
+    }
+
+    /* input box elements work*/
+    input, textarea {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #4e4848;
+      margin-bottom: 10px;
+    }
+
+    /* work of submit button */
+    input[type=submit] {
+      background: linear-gradient(to bottom, #404241, #727979); 
+      color: rgb(237, 237, 237);
+      cursor: pointer;
+      border: none;
+      padding: 5px 10px; 
+      text-align: center;
+      display: block; 
+      width: 20%; 
+      margin: 0 auto; 
+      font-weight: bold; 
+    }
+
+    /* required fields */
+    .required {
+      color: rgb(188, 65, 65);
+    }
+
+    
+    .flexbox {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px; 
+      width: 100%; 
+    }
+    #name, #email {
+      width: 45%;
+    }
+    input, textarea {
+      opacity: 0.79;
+    }
+
+    input::placeholder, textarea::placeholder {
+      opacity: 0.21; 
+    }
+    label[for=name], label[for=email] {
+      display: block;
+      text-align: center;
+      margin-bottom: 5px;
+      margin-top: 20px; 
+    }
+    label[for=email] {
+      display: flex;
+      justify-content: flex-end;
+      align-items: left;
+      padding-right: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>GET IN TOUCH</h1>
+    <form action="/action_page.php">
+      
+      <div class="flexbox">
+        
+        <label for="name">Tell us your name <span class="required">*</span></label>
+       
+        <label for="email">Enter your email <span class="required">*</span></label>
+      </div>
+      <div class="flexbox">
+      
+        <input type="text" id="name" name="name" required placeholder="Your name">
+        
+        <input type="email" id="email" name="email" required placeholder="Enter email">
+      </div>
+
+      <label for="website">Your website</label>
+     
+      <input type="url" id="website" name="website" placeholder="http:">
+
+      <label for="message">Message</label>
+      
+      <textarea id="message" name="message" rows="5" placeholder="Your message here"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
